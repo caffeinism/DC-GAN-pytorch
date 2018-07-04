@@ -103,5 +103,6 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-celeba_normal/
+celeba/
 celeba_result/
+.ipynb_checkpoints
