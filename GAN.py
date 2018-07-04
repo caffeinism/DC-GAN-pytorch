@@ -1,14 +1,14 @@
 
 # coding: utf-8
 
-# In[1]:
+# In[ ]:
 
 
 import argparse
 
 parser = argparse.ArgumentParser("DCGAN")
 
-parser.add_argument('--dataset_dir', type=str, default='./celeba')
+parser.add_argument('--dataset_dir', type=str, default='../celeba')
 parser.add_argument('--result_dir', type=str, default='./celeba_result')
 
 parser.add_argument('--batch_size', type=int, default=32)
@@ -21,7 +21,7 @@ betas = (0.0, 0.99) # adam optimizer beta1, beta2
 config, _ = parser.parse_known_args()
 
 
-# In[2]:
+# In[ ]:
 
 
 import torch
@@ -34,7 +34,7 @@ import torchvision.transforms as transforms
 from torch.autograd import Variable
 
 
-# In[3]:
+# In[ ]:
 
 
 class Generator(nn.Module):
@@ -61,7 +61,7 @@ class Generator(nn.Module):
         return self.main(x)
 
 
-# In[4]:
+# In[ ]:
 
 
 class Discriminator(nn.Module):
@@ -130,7 +130,8 @@ class Trainer:
                 d_fake = self.discriminator(fake)
                 g_loss = self.loss(d_fake, label_real) # trick the fake into being real
                 g_loss.backward()
-                self.optimizer_g.step(  )   
+                self.optimizer_g.step()   
+            print("epoch{:03d} d_real: {}, d_fake: {}".format(epoch, d_real.mean(), d_fake.mean()))
             vutils.save_image(fake.data, '{}/result_epoch_{:03d}.png'.format(config.result_dir, epoch), normalize=True)
 
 
