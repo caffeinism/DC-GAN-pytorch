@@ -6,9 +6,11 @@
 - CelebA Dataset: http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html
     - We will use the img_align_celeba dataset.
 ## Usage
-- python GAN.py --dataset_dir=dataset dir --result_dir=resultdir
+- python GAN.py --dataset_dir='dataset dir' --result_dir='result dir'
     - example: python GAN.py --dataset_dir=./celeba --result_dir=./celeba_result
 - dataset example
     - ./celeba/celeba/000000.jpg
     - ./celeba/celeba/000001.jpg
     - ...
+## Result
+![epoch20](./result_sample/01_default_dcgan_20epoch.png)
