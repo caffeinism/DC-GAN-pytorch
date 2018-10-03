@@ -25,8 +25,8 @@
     - ...
 ## Result
 - LS-GAN(use MSE loss) celeba 20 epoch result
-![epoch20](./result_sample/lsgan_celeba_20epoch.png)
+    - ![epoch20](./result_sample/lsgan_celeba_20epoch.png)
 - DC-GAN(use BCE loss) VGGFace2 20 epoch result
-![epoch20](./result_sample/dcgan_vggface2_20epoch.png)
+    - ![epoch20](./result_sample/dcgan_vggface2_20epoch.png)
 - LS-GAN VGGFace2 20 epoch result
-![epoch20](./result_sample/lsgan_vggface2_20epoch.png)
+    - ![epoch20](./result_sample/lsgan_vggface2_20epoch.png)
